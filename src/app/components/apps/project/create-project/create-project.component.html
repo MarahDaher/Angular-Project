@@ -1,0 +1,110 @@
+<app-breadcrumb [title]="'Create New'" [items]="['Apps', 'Project']" [active_item]="'Create New'"></app-breadcrumb>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <form [formGroup]="form">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form theme-form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label>Project Title</label>
+                                        <input class="form-control" type="text" placeholder="Project name *"
+                                            formControlName="project_title">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Client name</label>
+                                        <input class="form-control" type="text"
+                                            placeholder="Name client or company name " formControlName="client_name">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Project Rate</label>
+                                                <input class="form-control" type="text" placeholder="Enter project Rate"
+                                                    formControlName="project_rate">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Project Type</label>
+                                                <select class="form-control digits" formControlName="project_type">
+                                                    <option *ngFor="let type of projectTypeList">{{type}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Priority</label>
+                                                <select class="form-control digits" formControlName="priority">
+                                                    <option *ngFor="let priority of priorityList">{{priority}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Project Size</label>
+                                                <select class="form-control digits" formControlName="project_size">
+                                                    <option *ngFor="let size of projectSizeList">{{size}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Starting date</label>
+                                                <input class="datepicker-here form-control" type="date"
+                                                    data-language="en" formControlName="start_date">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Ending date</label>
+                                                <input class="datepicker-here form-control" type="date"
+                                                    data-language="en" formControlName="end_date">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>Enter some Details</label>
+                                        <textarea class="form-control" rows="3" formControlName="details"></textarea>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>Upload project file</label>
+                                        <ngx-dropzone (change)="onSelect($event)">
+                                            <ngx-dropzone-label>Drop files here or click to upload.</ngx-dropzone-label>
+                                            <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                                                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                                            </ngx-dropzone-preview>
+                                        </ngx-dropzone>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group mb-0">
+                                                <button mat-raised-button class="btn-success mr-3"
+                                                    (click)="submitCreateProject(form.value)">Add</button>
+                                                <button mat-raised-button class="btn-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

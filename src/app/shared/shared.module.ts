@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragulaModule } from 'ng2-dragula';
 import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule} from '../shared/data/Material/material.module';
 // Components
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { FeatherIconsComponent } from './components/feather-icons/feather-icons.component';
@@ -61,6 +62,7 @@ import { NavService } from './services/nav.service';
     CommonModule,
     RouterModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
     NgbModule,
     DragulaModule.forRoot(),
@@ -75,6 +77,7 @@ import { NavService } from './services/nav.service';
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,
+    MaterialModule,
     LoaderComponent,
     BreadcrumbComponent,
     FeatherIconsComponent,

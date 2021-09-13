@@ -22,9 +22,7 @@
         "@schematics/angular:interceptor": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-          "skipTests": true
-        },
+
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -94,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/font-awesome/scss/font-awesome.scss",
               "src/styles.scss"
             ],
@@ -165,6 +164,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -201,10 +201,5 @@
   "defaultProject": "cuba",
   "cli": {
     "analytics": false
-  },
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
   }
 }

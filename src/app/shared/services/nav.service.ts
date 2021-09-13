@@ -83,12 +83,12 @@ export class NavService implements OnDestroy {
 
 	MENUITEMS: Menu[] = [
 		{
-			headTitle1: 'Sample', headTitle2: 'Ready Sample Page.',
+			headTitle1: 'Applications', headTitle2: 'Ready To Use Apps.',
 		},
 		{
-			title: 'Sample Page', icon: 'home', type: 'sub', badgeType: 'success', badgeValue: '2', active: true, children: [
-				{ path: '/sample-page', title: 'Sample 1', type: 'link' },
-				{ path: 'javascript:void(0);', title: 'Sample 2', type: 'extLink' }
+			title: 'Project', icon: 'box', type: 'sub', active: false, children: [
+				{ path: '/project/list', title: 'Project List', type: 'link' },
+				{ path: '/project/create', title: 'Create New', type: 'link' },
 			]
 		},
 	];
