@@ -86,9 +86,9 @@ export class NavService implements OnDestroy {
 			headTitle1: 'Applications', headTitle2: 'Ready To Use Apps.',
 		},
 		{
-			title: 'Project', icon: 'box', type: 'sub', active: false, children: [
-				{ path: '/project/list', title: 'Project List', type: 'link' },
-				{ path: '/project/create', title: 'Create New', type: 'link' },
+			title: 'Menu Orders', icon: 'box', type: 'sub', active: false, children: [
+				{ path: '/project/list', title: 'Orders', type: 'link' },
+				// { path: '/project/create', title: 'Create New', type: 'link' },
 			]
 		},
 	];

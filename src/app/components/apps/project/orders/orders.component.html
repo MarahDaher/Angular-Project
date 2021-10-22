@@ -1,0 +1,38 @@
+<app-breadcrumb [title]="'Orders'" [items]="['Apps', 'Menu']" [active_item]="'Orders'"></app-breadcrumb>
+
+
+<div class="container">
+  <div class="row justify-content-end">
+    <!-- <button nz-button nzType="primary" (click)="showModal()" >Add Order</button> -->
+
+    <button nz-button nzType="primary" (click)="createCustomButtonModal()" class="mr-3">Add Order</button>
+
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <nz-tree [nzData]="nodes" #tree nzDraggable nzBlockNode [nzTreeTemplate]="nzTreeTemplate"
+            (nzOnDrop)="nzEvent($event)">
+
+            <ng-template #nzTreeTemplate let-node let-origin="origin">
+              <a [href]="node.link" class="row custom-node" target='_blank'>
+                <div class="col-8 row justify-content-between">
+                  <a [href]="node.link">{{node.title}}</a>
+
+                </div>
+                <div class="col-4 row justify-content-end">
+                  <span class="file-name"><i class="fa fa-pencil text-success ml-3"
+                      (click)="createCustomButtonModal(node)"></i></span>
+                  <span class="file-name"><i class="fa fa-trash-o text-danger ml-4"
+                      (click)="showConfirm(node)"></i></span>
+                </div>
+              </a>
+            </ng-template>
+          </nz-tree>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

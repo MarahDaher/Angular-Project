@@ -6,6 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragulaModule } from 'ng2-dragula';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule} from '../shared/data/Material/material.module';
+import { DemoNgZorroAntdModule} from '../shared/data/Material/ng-zorro-antd.module';
+
 // Components
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { FeatherIconsComponent } from './components/feather-icons/feather-icons.component';
@@ -78,6 +80,7 @@ import { NavService } from './services/nav.service';
     ReactiveFormsModule,
     TranslateModule,
     MaterialModule,
+    DemoNgZorroAntdModule,
     LoaderComponent,
     BreadcrumbComponent,
     FeatherIconsComponent,

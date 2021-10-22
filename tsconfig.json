@@ -16,11 +16,11 @@
     {
       "path": "./e2e/tsconfig.json"
     },
-    {
-      "compilerOptions": {
-        "experimentalDecorators": true,
-        "allowJs": true,
-      }
-    }
+    // {
+    //   "compilerOptions": {
+    //     "experimentalDecorators": true,
+    //     "allowJs": true
+    //   }
+    // }
   ]
 }
